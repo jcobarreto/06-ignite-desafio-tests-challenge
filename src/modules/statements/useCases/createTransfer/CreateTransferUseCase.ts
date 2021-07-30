@@ -1,6 +1,7 @@
 import { inject, injectable } from "tsyringe";
 import { IUsersRepository } from "../../../users/repositories/IUsersRepository";
 import { IStatementsRepository } from "../../repositories/IStatementsRepository";
+import { ICreateTransferDTO } from "./ICreateTransferDTO";
 
 @injectable()
 class CreateTransferUseCase {
@@ -12,7 +13,7 @@ class CreateTransferUseCase {
     private statementsRepository: IStatementsRepository
   ) {}
 
-  async execute() {
+  async execute({ sender_id, receiver_id, type, amount, description }: ICreateTransferDTO) {
 
   }
 }
