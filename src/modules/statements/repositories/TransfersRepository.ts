@@ -15,15 +15,15 @@ export class TransfersRepository implements ITransfersRepository {
     sender_id,
     receiver_id,
     type,
-    description,
-    amount
+    amount,
+    description
   }: ICreateTransferDTO): Promise<Transfer> {
     const transfer = this.repository.create({
       sender_id,
       receiver_id,
       type,
-      description,
-      amount
+      amount,
+      description
     });
 
     return this.repository.save(transfer);

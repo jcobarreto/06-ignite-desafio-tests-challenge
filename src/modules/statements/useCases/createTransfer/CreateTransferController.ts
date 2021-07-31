@@ -13,7 +13,7 @@ class CreateTransferController {
     const { receiver_id } = request.params;
 
     const splittedPath = request.originalUrl.split('/')
-    const type = splittedPath[splittedPath.length - 1] as OperationType;
+    const type = splittedPath[splittedPath.length - 2] as OperationType;
 
     const createTransfer = container.resolve(CreateTransferUseCase);
 
